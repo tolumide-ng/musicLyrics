@@ -13,12 +13,19 @@ module.exports = {
     extensions: ['.jsx', '.js']
   },
   plugins: [
-    new Dotenv(),
+    // new Dotenv(),
     new webpack.DefinePlugin({
-      'process.env': {
-        API_BASE_URL: JSON.stringify(process.env.API_BASE_URL)
-      }
+      'process.env.BASE_URL': JSON.stringify(process.env.BASE_URL),
+      'process.env.API_KEY': JSON.stringify(process.env.API_KEY)
     })
+    // new webpack.DefinePlugin({
+    //   'process.env.SERVER_URL': JSON.stringify(process.env.SERVER_URL),
+    //   'process.env.SECRET': JSON.stringify(process.env.SECRET),
+    //   'process.env.FACEBOOK_SHARE_URL': JSON.stringify(process.env.FACEBOOK_SHARE_URL),
+    //   'process.env.TWITTER_SHARE_URL': JSON.stringify(process.env.TWITTER_SHARE_URL),
+    //   'process.env.FACEBOOK_SHARE_APP_ID': JSON.stringify(process.env.FACEBOOK_SHARE_APP_ID),
+    //   'process.env.PUSHER_KEY': JSON.stringify(process.env.PUSHER_KEY)
+    // })
   ],
   module: {
     rules: [

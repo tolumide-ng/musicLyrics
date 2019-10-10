@@ -5,11 +5,9 @@ import store from '../store';
 import Main from '../routes';
 
 const App = () => (
-  <Provider store={store}>
-    <Router>
-      <Main />
-    </Router>
-  </Provider>
+  <Router>
+    <Main />
+  </Router>
 );
 
 export default App;

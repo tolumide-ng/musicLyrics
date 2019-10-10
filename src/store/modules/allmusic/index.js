@@ -1,7 +1,5 @@
-export const fetchAllMusic = {
-  allMusicStatus: 'rest',
-  allMusicError: null,
-  allMusic: []
-};
-
-export default fetchAllMusic;
+// const initialState = {
+//   allMusicStatus: 'rest',
+//   allMusicError: null,
+//   allMusic: []
+// };
