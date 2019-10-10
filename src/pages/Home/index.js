@@ -1,9 +1,10 @@
 import React from 'react';
+import Tracks from '../../components/tracks';
 
 const Home = () => {
   return (
     <div>
-      <p>Welcome to React</p>
+      <Tracks />
     </div>
   );
 };
