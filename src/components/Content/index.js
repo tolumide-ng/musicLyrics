@@ -8,7 +8,7 @@ const Content = ({}) => {
     <div className="w-10/12 flex flex-col bg-white">
       <img src={pageCover} className="w-full h-64 object-cover" />
       <HomeHeader />
-      <div className="w-4/5 flex flex-col overflow-auto">
+      <div className="w-full lg:w-4/5 flex flex-col overflow-auto pl-4 pr-4 lg:pr-0">
         <TracksBox />
       </div>
     </div>

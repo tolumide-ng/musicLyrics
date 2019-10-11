@@ -6,7 +6,7 @@ const { LYRICS_FAILURE, LYRICS_PENDING, LYRICS_SUCCESS } = actionTypes;
 export const fetchLyricsPending = () => ({
   type: LYRICS_PENDING,
   payload: {
-    lyricsStatus: 'rest',
+    lyricsStatus: 'pending',
     lyricsError: null,
     lyrics: []
   }

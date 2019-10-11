@@ -9,7 +9,7 @@ const Trending = ({ fetchAlbum, history, albumTracks = [], albumStatus }) => {
   }, []);
 
   return (
-    <div className="w-1/4 ml-4 overflow-auto">
+    <div className="invisible md:visible w-1/4 ml-4 overflow-auto">
       {albumTracks.length ? (
         albumTracks.map(album => {
           const {

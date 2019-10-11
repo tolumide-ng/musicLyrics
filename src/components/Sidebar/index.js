@@ -2,22 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import artist from '../../assets/images/artist.png';
 import favourite from '../../assets/images/favourite.png';
-import search from '../../assets/images/search.png';
+import home from '../../assets/images/home.png';
 import playlist from '../../assets/images/playlist.png';
 import album from '../../assets/images/album.png';
 import avatar from '../../assets/images/avatar.png';
 
 const SideBar = ({}) => {
   return (
-    <div className="bg-indigo-500 flex flex-col rounded-lg p-2 w-2/12">
+    <div className="bg-indigo-500 flex flex-col rounded-lg p-2 w-2/12 hidden lg:block">
       <div className="h-40 rounded-tl-lg justify-center flex flex-col items-center">
         <img src={avatar} alt="avatar" className="h-16 w-16" />
         <p className="mt-2">First Lastname</p>
       </div>
       <div className="flex flex-col">
         <Link className="flex justify-start items-center mb-6" to="/">
-          <img src={search} alt="search" className="h-4 mr-4" />
-          <p>Search</p>
+          <img src={home} alt="search" className="h-5 mr-4" />
+          <p>Home</p>
         </Link>
         <Link className="flex justify-start items-center mb-6" to="/">
           <img src={favourite} alt="favourite music" className="h-4 mr-4" />

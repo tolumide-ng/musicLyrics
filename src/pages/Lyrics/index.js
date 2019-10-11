@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Sidebar from '../../components/Sidebar';
 import SongLyrics from '../../components/SongLyrics';
 import Trending from '../../components/Trending';
@@ -13,7 +13,7 @@ const LyricsPage = ({ match }) => {
         <div className="w-full flex flex-col bg-white">
           <img src={lyricspage} className="w-full h-64 object-cover" />
           <LyricsPageLabel />
-          <div className="w-full flex overflow-auto">
+          <div className="w-full flex flex-row overflow-auto">
             <SongLyrics />
             <Trending />
           </div>

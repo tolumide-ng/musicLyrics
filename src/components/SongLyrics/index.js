@@ -9,7 +9,7 @@ const SongLyrics = ({ match, fetchLyrics, musicLyrics = [], lyricsStatus }) => {
     fetchLyrics({ history, id });
   }, []);
   return (
-    <div className={'w-3/4 ml-4'}>
+    <div className={'w-full md:w-3/4 ml-4'}>
       {musicLyrics.length ? musicLyrics : <span>Loading...</span>}
     </div>
   );
