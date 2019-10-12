@@ -37,7 +37,7 @@ export const lyricsAction = ({
   dispatch(fetchLyricsPending());
   try {
     const response = await axios({
-      url: `${process.env.THE_URL}track.lyrics.get?track_id=${id}&apikey=${process.env.API_KEY}`,
+      url: `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${id}&apikey=${process.env.API_KEY}`,
       method: 'get'
     });
 
