@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "heroku-postbuild": "npm run build",
-    "build": "webpack --env.mode production",
+    "build": "webpack --env.mode development",
     "lint:fix": "prettier-eslint \"**/*.{js,json}\" --write",
     "prettier": "prettier **/**/*.{js,json} --write",
     "start:dev": "webpack-dev-server --hot --env.mode development --open --port 5000"
