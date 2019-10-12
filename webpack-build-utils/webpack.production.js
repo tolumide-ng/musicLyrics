@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   optimization: {
     minimizer: [
-      new TerserJSPlugin({}),
       new HtmlWebpackPlugin({
         template: './src/index.html',
         minify: {
