@@ -34,11 +34,9 @@ export const albumAction = ({ history = {} }) => async dispatch => {
   dispatch(fetchAlbumPending());
   try {
     const response = await axios({
-      url: `https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page=1&page_size=14&country=it&f_has_lyrics=1&apikey=6fe54f635e9936e32d712c4d3053efb5`,
+      url: `${process.env.THE_URL}album.tracks.get?album_id=13750844&page=1&page_size=20&apikey=${process.env.API_KEY}`,
       method: 'get'
     });
-
-    console.log('this is the server response', response);
 
     const data = response.data.message.body.track_list;
 
