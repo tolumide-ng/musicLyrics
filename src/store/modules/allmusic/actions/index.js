@@ -34,7 +34,7 @@ export const allMusicAction = ({ history = {} }) => async dispatch => {
   dispatch(fetchAllMusicPending());
   try {
     const response = await axios({
-      url: `${process.env.BASE_URL}chart.tracks.get?chart_name=top&page=1&page_size=14&country=it&f_has_lyrics=1&apikey=${process.env.API_KEY}`,
+      url: `${process.env.THE_URL}chart.tracks.get?chart_name=top&page=1&page_size=14&country=it&f_has_lyrics=1&apikey=${process.env.API_KEY}`,
       method: 'get'
     });
 

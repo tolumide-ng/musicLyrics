@@ -14,7 +14,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.BASE_URL': JSON.stringify(process.env.BASE_URL),
+      'process.env.THE_URL': JSON.stringify(process.env.THE_URL),
       'process.env.API_KEY': JSON.stringify(process.env.API_KEY)
     })
   ],
