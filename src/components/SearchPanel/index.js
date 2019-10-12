@@ -26,7 +26,7 @@ const SearchPanel = ({ searchAction }) => {
         <input
           type="text"
           placeholder="Search by artist, title, or track title "
-          className="border w-7/12 outline-none md:w-9/12"
+          className="border w-7/12 outline-none md:w-9/12 p-1"
           value={searchVal}
           onChange={e => {
             setSearchVal(e.target.value);
@@ -35,7 +35,7 @@ const SearchPanel = ({ searchAction }) => {
         />
         <button
           type="submit"
-          className="w-5/12 md:w-3/12 bg-indigo-500 outline-none"
+          className="w-5/12 md:w-3/12 bg-indigo-400 text-white  outline-none p-1"
         >
           Search
         </button>
