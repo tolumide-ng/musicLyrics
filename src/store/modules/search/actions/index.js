@@ -34,7 +34,7 @@ export const searchAction = ({ searchQuery }) => async dispatch => {
   dispatch(searchPending());
   try {
     const response = await axios({
-      url: `${process.env.THE_URL}track.search?q=${searchQuery}&page_size=30&page=1&s_track_rating=desc&apikey=${process.env.API_KEY}`,
+      url: `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?q=${searchQuery}&page_size=30&page=1&s_track_rating=desc&apikey=${process.env.API_KEY}`,
       method: 'get'
     });
 
