@@ -19,10 +19,6 @@ const Trending = ({ fetchAlbum, history, albumTracks = [], albumStatus }) => {
             track_rating,
             commontrack_id
           } = album.track;
-          console.log(
-            'all of the information per track>>>>>>>>>>>',
-            album.track
-          );
           return (
             <Trends
               key={track_id}

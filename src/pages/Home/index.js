@@ -5,11 +5,9 @@ import './index.scss';
 
 const Home = ({}) => {
   return (
-    <div className="w-full bg-gray-300 py-6">
-      <div className="flex flex-row w-11/12 mx-auto h-screen rounded-lg">
-        <Sidebar />
-        <Content />
-      </div>
+    <div className="flex flex-row w-full md:w-11/12 mx-auto h-screen rounded-lg">
+      <Sidebar />
+      <Content />
     </div>
   );
 };
