@@ -3,14 +3,24 @@ import { connect } from 'react-redux';
 import { allMusicAction } from '../../store/modules/allmusic/actions';
 import Tracks from '../Tracks';
 
-const TracksBox = ({ fetchMusic, history, allFetchedMusic = [] }) => {
+const TracksBox = ({
+  fetchMusic,
+  history,
+  allFetchedMusic = [],
+  allMusicStatus
+}) => {
   useEffect(() => {
     fetchMusic({ history });
   }, []);
 
   return (
     <div className="w-full">
-      {allFetchedMusic.length ? (
+      {allMusicStatus === 'pending' && (
+        <span className="text-center flex justify-center items-center">
+          Loading...
+        </span>
+      )}
+      {allMusicStatus === 'success' && allFetchedMusic.length ? (
         allFetchedMusic.map(track => {
           const {
             track_id,
