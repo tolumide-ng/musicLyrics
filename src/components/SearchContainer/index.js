@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import SearchTrack from '../SearchTrack';
 
-const SearchContainer = ({ searchStatus, searchResult, searchError }) => {
+const SearchContainer = ({ searchStatus, searchResult = [], searchError }) => {
   return (
     <div className="w-full flex flex-wrap justify-center items-center overflow-auto">
       {searchStatus === 'rest' && (

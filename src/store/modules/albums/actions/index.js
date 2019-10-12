@@ -34,7 +34,7 @@ export const albumAction = ({ history = {} }) => async dispatch => {
   dispatch(fetchAlbumPending());
   try {
     const response = await axios({
-      url: `${process.env.THE_URL}album.tracks.get?album_id=13750844&page=1&page_size=20&apikey=${process.env.API_KEY}`,
+      url: `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/album.tracks.get?album_id=13750844&page=1&page_size=20&apikey=6fe54f635e9936e32d712c4d3053efb5`,
       method: 'get'
     });
 

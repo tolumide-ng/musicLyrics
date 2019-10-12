@@ -34,7 +34,7 @@ export const labelAction = ({ history = {}, id }) => async dispatch => {
   dispatch(fetchLabelPending());
   try {
     const response = await axios({
-      url: `${process.env.THE_URL}track.get?commontrack_id=${id}&apikey=${process.env.API_KEY}`,
+      url: `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.get?commontrack_id=${id}&apikey=6fe54f635e9936e32d712c4d3053efb5`,
       method: 'get'
     });
 
