@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.bottom-border {
+  border-bottom: 1.1px solid rgba(64, 64, 68, 0.3);
+}
+
+.bottom-border:hover {
+  border-bottom: none;
+  //   box-shadow: 0px 2px 1px #888, 0px -2px 1px rgba(0.9, 2.1, 0.3, 0.2);
+  cursor: pointer;
+}
+
+.overflow-now {
+  overflow: scroll;
+}
+
+.searchpanel {
+  background-image: url('../../assets/images/searchpanel.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

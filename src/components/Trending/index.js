@@ -1,15 +1,56 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { albumAction } from '../../store/modules/albums/actions';
 import Trends from '../Trends';
-import trend from '../../assets/images/albumcover.png';
 
-const Trending = ({}) => {
+const Trending = ({ fetchAlbum, history, albumTracks = [], albumStatus }) => {
+  useEffect(() => {
+    fetchAlbum({ history });
+  }, []);
+
   return (
-    <div className="w-1/5">
-      <h3 className="font-bold tracking-wide anitialized mb-4">Now Trending</h3>
-      <img src={trend} alt="Trending Album wall paper" className="h-28 pr-4" />
-      <Trends />
+    <div className="invisible md:visible w-1/4 ml-4 overflow-auto">
+      {albumTracks.length ? (
+        albumTracks.map(album => {
+          const {
+            track_id,
+            track_name,
+            artist_name,
+            track_rating,
+            commontrack_id
+          } = album.track;
+          console.log(
+            'all of the information per track>>>>>>>>>>>',
+            album.track
+          );
+          return (
+            <Trends
+              key={track_id}
+              trackId={track_id}
+              trackName={track_name}
+              artistName={artist_name}
+              trackRating={track_rating}
+              commonTrackId={commontrack_id}
+            />
+          );
+        })
+      ) : (
+        <span>Loading?</span>
+      )}
     </div>
   );
 };
 
-export default Trending;
+const mapStateToProps = state => ({
+  albumTracks: state.albumReducer.album,
+  albumStatus: state.albumReducer.albumStatus
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchAlbum: ({ history }) => dispatch(albumAction({ history }))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Trending);
