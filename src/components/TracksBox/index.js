@@ -20,7 +20,6 @@ const TracksBox = ({
           Loading...
         </span>
       )}
-      {console.log('at this point >>>>>>', allFetchedMusic)}
       {allMusicStatus === 'success' && allFetchedMusic.length ? (
         allFetchedMusic.map(track => {
           const {

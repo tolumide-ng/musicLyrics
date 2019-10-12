@@ -20,7 +20,7 @@ const HomeHeader = ({}) => {
       </div>
       <div className="invisible md:visible w-full flex items-center justify-between mt-4 bottom-border">
         <p className="w-2/4 text-gray-500">Track</p>
-        <p className="w-1/4 text-gray-500">Album</p>
+        <p className="w-1/4 text-gray-500 text-center">Album</p>
         <p className="w-1/4 text-center text-gray-500">Rating</p>
       </div>
     </div>
