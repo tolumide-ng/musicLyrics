@@ -37,11 +37,11 @@ export const lyricsAction = ({
   dispatch(fetchLyricsPending());
   try {
     const response = await axios({
-      url: `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${id}&apikey=$6fe54f635e9936e32d712c4d3053efb5`,
+      url: `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${id}&apikey=6fe54f635e9936e32d712c4d3053efb5`,
       method: 'get'
     });
 
-    const data = await response.data.message.body.lyrics;
+    const data = await response.data.message.body.lyrics.lyrics_body;
 
     dispatch(fetchLyricsSuccess(data));
   } catch (error) {

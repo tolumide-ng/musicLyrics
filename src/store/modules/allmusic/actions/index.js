@@ -40,8 +40,6 @@ export const allMusicAction = ({ history = {} }) => async dispatch => {
 
     const data = await response.data.message.body.track_list;
 
-    console.log('this is the server response', data);
-
     dispatch(fetchAllMusicSuccess(data));
   } catch (error) {
     dispatch(fetchAllMusicFailure(error));
