@@ -8,6 +8,10 @@ const SongLyrics = ({ match, fetchLyrics, musicLyrics = [], lyricsStatus }) => {
     const id = match.params.lyricsId;
     fetchLyrics({ history, id });
   }, []);
+
+  // useEffect(() => {
+  //   console.log('value of the console.>>>>', fetchLyrics);
+  // }, [lyricsStatus]);
   return (
     <div className={'w-full md:w-3/4 ml-4'}>
       {musicLyrics.length ? musicLyrics : <span>Loading...</span>}
@@ -15,10 +19,13 @@ const SongLyrics = ({ match, fetchLyrics, musicLyrics = [], lyricsStatus }) => {
   );
 };
 
-const mapStateToProps = state => ({
-  musicLyrics: state.lyricsReducer.lyrics.lyrics_body,
-  lyricsStatus: state.lyricsReducer.lyricsStatus
-});
+const mapStateToProps = state => {
+  // console.log('value of the state>>>>>>>>', state);
+  return {
+    musicLyrics: state.lyricsReducer.lyrics,
+    lyricsStatus: state.lyricsReducer.lyricsStatus
+  };
+};
 
 const mapDispatchToProps = dispatch => ({
   fetchLyrics: ({ history, id }) => dispatch(lyricsAction({ history, id }))
