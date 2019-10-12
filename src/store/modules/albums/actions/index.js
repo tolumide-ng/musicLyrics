@@ -38,6 +38,8 @@ export const albumAction = ({ history = {} }) => async dispatch => {
       method: 'get'
     });
 
+    console.log('this is the server response', response);
+
     const data = response.data.message.body.track_list;
 
     dispatch(fetchAlbumSuccess(data));
