@@ -16,23 +16,38 @@ const SideBar = ({}) => {
         <p className="mt-2 text-white">First Lastname</p>
       </div>
       <div className="flex flex-col">
-        <Link className="flex justify-start items-center mb-6" to="/">
+        <Link
+          className="flex justify-start items-center py-3 pl-2 hover:bg-indigo-600 hover:border rounded-lg hover:shadow"
+          to="/"
+        >
           <img src={home} alt="search" className="h-5 mr-4" />
           <p className="text-white">Home</p>
         </Link>
-        <Link className="flex justify-start items-center mb-6" to="/search">
+        <Link
+          className="flex justify-start items-center py-3 pl-2 hover:bg-indigo-600 hover:border rounded-lg hover:shadow"
+          to="/search"
+        >
           <img src={search} alt="favourite music" className="h-4 mr-4" />
           <p className="text-white">Search</p>
         </Link>
-        <Link className="flex justify-start items-center mb-6" to="/">
+        <Link
+          className="flex justify-start items-center py-3 pl-2 hover:bg-indigo-600 hover:border rounded-lg hover:shadow"
+          to="/"
+        >
           <img src={playlist} alt="music playlist" className="h-4 mr-4" />
           <p className="text-white">Playlist</p>
         </Link>
-        <Link className="flex justify-start items-center mb-6" to="/">
+        <Link
+          className="flex justify-start items-center py-3 pl-2 hover:bg-indigo-600 hover:border rounded-lg hover:shadow"
+          to="/"
+        >
           <img src={artist} alt="music by artist" className="h-4 mr-4" />
           <p className="text-white">Artist</p>
         </Link>
-        <Link className="flex justify-start items-center mb-6" to="/">
+        <Link
+          className="flex justify-start items-center py-3 pl-2 hover:bg-indigo-600 hover:border rounded-lg hover:shadow"
+          to="/"
+        >
           <img src={album} alt="music by album" className="h-4 mr-4" />
           <p className="text-white">Album</p>
         </Link>

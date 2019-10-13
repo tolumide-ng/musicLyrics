@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { allMusicAction } from '../../store/modules/allmusic/actions';
 import Tracks from '../Tracks';
+import Loading from '../Loading';
 
 const TracksBox = ({
   fetchMusic,
@@ -15,9 +16,9 @@ const TracksBox = ({
 
   return (
     <div className="w-full">
-      {allMusicStatus === 'pending' && (
-        <span className="text-center flex justify-center items-center">
-          Loading...
+      {allMusicStatus === 'error' && (
+        <span className="text-center flex justify-center items-center text-red-700">
+          There appears to have been an error, please reload
         </span>
       )}
       {allMusicStatus === 'success' && allFetchedMusic.length ? (
@@ -43,7 +44,7 @@ const TracksBox = ({
           );
         })
       ) : (
-        <span> Loading ... </span>
+        <Loading />
       )}
     </div>
   );

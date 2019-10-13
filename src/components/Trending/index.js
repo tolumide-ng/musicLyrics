@@ -31,7 +31,7 @@ const Trending = ({ fetchAlbum, history, albumTracks = [], albumStatus }) => {
           );
         })
       ) : (
-        <span>Loading?</span>
+        <span>Loading</span>
       )}
     </div>
   );
