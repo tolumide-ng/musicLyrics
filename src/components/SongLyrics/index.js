@@ -13,15 +13,15 @@ const SongLyrics = ({ match, fetchLyrics, musicLyrics = [], lyricsStatus }) => {
   return (
     <div className={'w-full md:w-3/4 ml-4'}>
       {lyricsStatus === 'error' && (
-        <p>
+        <p className="text-red-500 mt-4 mx-auto text-center">
           Seems like there is an error, could you check your network and reload
-          the page please?
+          the page please? If the error persists, We probably do not have the
+          lyrics to this song
         </p>
       )}
-      {musicLyrics.length ? (
+      {lyricsStatus === 'pending' && <Loading />}
+      {lyricsStatus === 'success' && musicLyrics.length && (
         <div className="format">{musicLyrics}</div>
-      ) : (
-        <Loading />
       )}
     </div>
   );
