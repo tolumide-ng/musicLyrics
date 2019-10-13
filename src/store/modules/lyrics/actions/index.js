@@ -15,7 +15,7 @@ export const fetchLyricsPending = () => ({
 export const fetchLyricsSuccess = lyrics => ({
   type: LYRICS_SUCCESS,
   payload: {
-    lyricsStatus: 'rest',
+    lyricsStatus: 'success',
     lyricsError: null,
     lyrics
   }
@@ -24,7 +24,7 @@ export const fetchLyricsSuccess = lyrics => ({
 export const fetchLyricsFailure = lyricsError => ({
   type: LYRICS_FAILURE,
   payload: {
-    lyricsStatus: 'rest',
+    lyricsStatus: 'error',
     lyricsError,
     lyrics: []
   }
