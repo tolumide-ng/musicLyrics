@@ -1,20 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import SearchTrack from '../SearchTrack';
+import Loading from '../Loading';
 
 const SearchContainer = ({ searchStatus, searchResult = [], searchError }) => {
   return (
     <div className="w-full flex flex-wrap justify-center items-center overflow-auto">
       {searchStatus === 'rest' && (
         <span className="text-blue-500">
-          Search Articles by favorite article, title, or artist name
+          Search Tracks by favorite article, title, or artist name
         </span>
       )}
-      {searchStatus === 'pending' && <span>Loading</span>}
+      {searchStatus === 'pending' && <Loading />}
       {searchError === 'error' && <span>Please try again</span>}
       {searchStatus === 'success' && searchResult.length < 1 && (
         <span className="text-blue-500">
           Please try again, there is no content with such word
+        </span>
+      )}
+      {searchStatus === 'success' && (
+        <span aria-live="polite" className="text-white">
+          {searchResult.length} results found
         </span>
       )}
       {searchStatus === 'success' &&

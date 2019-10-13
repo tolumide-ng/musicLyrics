@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { lyricsAction } from '../../store/modules/lyrics/actions';
+import Loading from '../Loading';
 
 const SongLyrics = ({ match, fetchLyrics, musicLyrics = [], lyricsStatus }) => {
   useEffect(() => {
@@ -11,7 +12,17 @@ const SongLyrics = ({ match, fetchLyrics, musicLyrics = [], lyricsStatus }) => {
 
   return (
     <div className={'w-full md:w-3/4 ml-4'}>
-      {musicLyrics.length ? musicLyrics : <span>Loading...</span>}
+      {lyricsStatus === 'error' && (
+        <p>
+          Seems like there is an error, could you check your network and reload
+          the page please?
+        </p>
+      )}
+      {musicLyrics.length ? (
+        <div className="format">{musicLyrics}</div>
+      ) : (
+        <Loading />
+      )}
     </div>
   );
 };

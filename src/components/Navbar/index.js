@@ -6,13 +6,13 @@ const Navbar = ({}) => {
     <div className="w-full flex justify-between px-4 items-center visible lg:invisible mt-4">
       <NavLink
         to="/"
-        className="bg-indigo-400 p-1 rounded text-white cursor-pointer"
+        className="bg-indigo-800 hover:bg-indigo-600 p-1 rounded text-white cursor-pointer"
       >
         Home
       </NavLink>
       <NavLink
         to="/search"
-        className="bg-indigo-400 p-1 rounded cursor-pointer text-white"
+        className="bg-indigo-800 hover:bg-indigo-600 p-1 rounded cursor-pointer text-white"
       >
         Search
       </NavLink>

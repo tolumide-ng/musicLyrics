@@ -3,3 +3,4 @@ package-lock.json
 .env
 dist/
 .DS_Store
+src/assets/.DS_Store

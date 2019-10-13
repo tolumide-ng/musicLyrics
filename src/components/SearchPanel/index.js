@@ -35,7 +35,7 @@ const SearchPanel = ({ searchAction }) => {
         />
         <button
           type="submit"
-          className="w-5/12 md:w-3/12 bg-indigo-400 text-white  outline-none p-1"
+          className="w-5/12 md:w-3/12 bg-indigo-800 hover:bg-indigo-600 text-white  outline-none p-1"
         >
           Search
         </button>

@@ -26,7 +26,7 @@ const Trends = ({
       <p className="mr-4">{trackRating}</p>
       <div className="antialiased">
         <p className="text-sm">{trackName}</p>
-        <p className="text-gray-400 text-xs">{artistName}</p>
+        <p className="text-gray-700 text-xs">By: {artistName}</p>
       </div>
     </div>
   );
